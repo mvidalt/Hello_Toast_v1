@@ -1,37 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <Button
         android:id="@+id/button_toast"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:baselineAligned="false"
         android:text="Toast"
+        android:textAllCaps="true" />
+
+    <Button
+        android:id="@+id/button_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_toast"
+        android:layout_marginTop="0dp"
+        android:text="Count"
         android:textAllCaps="true" />
 
     <TextView
         android:id="@+id/show_count"
-        android:layout_width="match_parent"
-        android:layout_height="525dp"
-        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_toast"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="-47dp"
+        android:layout_toEndOf="@+id/button_toast"
+        android:layout_toRightOf="@+id/button_toast"
         android:background="#FFFF00"
         android:gravity="center"
         android:text="0"
-        android:textColor="#3f51b5"
-        android:textSize="150sp"
+        android:textColor="#3F51B5"
+        android:textSize="150dp"
         android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/button_count"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Count"
-        android:textAllCaps="true"
-        tools:visibility="visible" />
-</LinearLayout>
+</RelativeLayout>
