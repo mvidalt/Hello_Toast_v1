@@ -4,60 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="10dp"
     android:orientation="vertical">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <Button
+        android:id="@+id/button_toast"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity"
-        tools:layout_editor_absoluteX="-105dp"
-        tools:layout_editor_absoluteY="20dp">
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:text="Toast"
+        android:textAllCaps="true" />
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="296dp"
-            android:layout_height="569dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
+    <TextView
+        android:id="@+id/show_count"
+        android:layout_width="match_parent"
+        android:layout_height="525dp"
+        android:layout_weight="1"
+        android:background="#FFFF00"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="#3f51b5"
+        android:textSize="150sp"
+        android:textStyle="bold" />
 
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="#FFFF00"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <Button
-                android:id="@+id/button_toast"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:baselineAligned="false"
-                android:text="Toast"
-                android:textAllCaps="true" />
-
-            <TextView
-                android:id="@+id/show_count"
-                android:layout_width="match_parent"
-                android:layout_height="470dp"
-                android:gravity="center"
-                android:text="0"
-                android:textColor="#3f51b5"
-                android:textSize="150sp"
-                tools:layout_editor_absoluteX="-105dp"
-                tools:layout_editor_absoluteY="284dp" />
-
-            <Button
-                android:id="@+id/button_count"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-
-                android:text="Count"
-                android:textAllCaps="true" />
-
-        </LinearLayout>
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/button_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Count"
+        android:textAllCaps="true"
+        tools:visibility="visible" />
 </LinearLayout>
